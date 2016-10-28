@@ -1,0 +1,92 @@
+*{
+	font-family: 'Comfortaa', cursive;
+	color: #3f3844;
+}
+.amarillo {
+	background-color: #fad400;
+}
+.fondo {
+	background-color: #EAECEE;
+}
+section {
+	height: 590px;
+}
+.blanco{
+	color: white;
+}
+h1 {
+	font-family: 'Lobster', cursive;
+}
+#new {
+	width: 130px;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: rgba(44,169,199,0.3); 
+	border:none;
+	display: inline-block;
+}
+
+#new:hover {
+	background-color: rgba(44,169,199,0.7);
+}
+
+.forma {
+	background-color: #2CA9C7;
+	padding: 15px;
+	width: 280px;
+	border-radius: 10px;
+	margin: 10px 20px 10px 0px;
+	display: inline-block;
+
+}
+input {
+	width: 100%;
+	padding: 5px 0px;
+	display: block;
+}
+button {
+	margin-top: 5px;
+	border:none;
+	border-radius: 5px;
+}
+.contenedor{
+	background-color: rgba(250,212,0,0.5);
+	padding: 15px;
+	width: 280px;
+	border-radius: 10px;
+	margin: 10px 20px 10px 0px;
+	display: inline-block;
+}
+.botonTarjeta {
+	background-color: rgba(44,169,199,0.9);
+	padding: 10px;
+	width: 100%;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+textarea {
+	display: block;
+	margin: 5px;
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 50px;
+	max-height: 50px;
+}
+.arriba{
+	vertical-align: top;
+}
+.hide {
+  display: none;
+}
+.botonGuardar{
+	background-color: rgba(44,169,199,0.5);
+	padding: 5px;
+	border-radius: 10px;
+}
+.etiquetas {
+	width: 100%;
+	text-align: left;
+	padding: 2px;
+	margin: 2px;
+}
+
