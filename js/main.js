@@ -1,15 +1,19 @@
+//Obtenemos mediante el Id el objeto boton 
 var boton = document.getElementById('new');
-
+//si boton tiene n click llama a la funcion crear formulario
 boton.onclick = function() {
 	crearFormulario();
+	// se esconde el boton de añadir lista
 	boton.setAttribute("class","hide");
 }
-
+// funcion crea un div para pedir el nombre de la lista
 function crearFormulario() {
+	// se crea un elemnto div, se le colocan clases, y se agrega antes del boton de Añaidr Lista
+	//este elemento es de color azul y tiene un input y un boton
 	var formulario = document.createElement('div');
 	formulario.setAttribute("class","forma arriba");
 	boton.parentNode.insertBefore(formulario, boton);
-
+	//se crea un input para escribir el nombre de la nueva lista y se agrega como hijo del div que se creo arriba, tiene focus para poder esccribir directamente en el 
 	var nombre = document.createElement('input');
 	nombre.setAttribute("type","text");
 	nombre.setAttribute("placeholder","Nombre de la lista");
@@ -76,11 +80,6 @@ function crearTarjeta(btntjt) {
 	btntjt.addEventListener('click',function(evento) {
 		var contenedorTarjeta = document.createElement('div');
 		var nombreTarjeta = document.createElement('textarea');
-		
-		// nombreTarjeta.id = "" + (new Date()).getTime();
-		// nombreTarjeta.setAttribute("draggable","true");
-		// nombreTarjeta.setAttribute("ondragstart","drag(event)");
-		
 		contenedorTarjeta.appendChild(nombreTarjeta);
 		this.parentNode.insertBefore(contenedorTarjeta, btntjt);
 
@@ -113,12 +112,13 @@ function cambiarElemento(btnew,title,apa,cnt) {
 				nuevo.id = "" + (new Date()).getTime();
 				nuevo.setAttribute("draggable","true");
 				nuevo.setAttribute("ondragstart","drag(event)");
+				nuevo.setAttribute("ondragenter","dragChange(event)");
 			}
 	},false);
 }
 
 function drag(ev) {
-	console.log(ev);
+	//console.log(ev);
     ev.dataTransfer.setData("text", ev.target.id);
 }
 
@@ -126,7 +126,7 @@ function drop(ev) {
 	ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     var z = document.getElementById(data);
-    console.log(ev.target.tagName);
+    //console.log(ev.target.tagName);
     if(ev.target.tagName === 'DIV'){
     	ev.target.insertBefore(z,ev.target.lastChild);
     }
@@ -136,3 +136,8 @@ function drop(ev) {
 function allowDrop(ev) {
     ev.preventDefault();
 }
+
+function dragChange(ev){
+	ev.target.style.background = "#2CA9C7";
+}
+

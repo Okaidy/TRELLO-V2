@@ -1,22 +1,29 @@
+/*tipoggrafia y color para letras de pagina*/
 *{
 	font-family: 'Comfortaa', cursive;
 	color: #3f3844;
 }
-.amarillo {
+/*fondo amarillo*/
+.amarillo{
 	background-color: #fad400;
 }
+/*fondo para toda la seccion principal*/
 .fondo {
 	background-color: #EAECEE;
 }
+/*alto de la seccion principals*/
 section {
 	height: 590px;
 }
+/*color para letra*/
 .blanco{
 	color: white;
 }
+/*formato pra el h1, nombre de la pagina*/
 h1 {
 	font-family: 'Lobster', cursive;
 }
+/*estilo para el boton de Añadir lista*/
 #new {
 	width: 130px;
 	padding: 10px;
@@ -25,11 +32,11 @@ h1 {
 	border:none;
 	display: inline-block;
 }
-
+/*cambia de colo al pasar sobre el boton de añadir lista*/
 #new:hover {
 	background-color: rgba(44,169,199,0.7);
 }
-
+/*estilo para div que pide nombre de lista*/
 .forma {
 	background-color: #2CA9C7;
 	padding: 15px;
@@ -37,18 +44,20 @@ h1 {
 	border-radius: 10px;
 	margin: 10px 20px 10px 0px;
 	display: inline-block;
-
 }
+/*estilo para las etiquetas inputs*/
 input {
 	width: 100%;
 	padding: 5px 0px;
 	display: block;
 }
+/*estilop para las etiquetas button*/
 button {
 	margin-top: 5px;
 	border:none;
 	border-radius: 5px;
 }
+/*estilo para div de lista*/
 .contenedor{
 	background-color: rgba(250,212,0,0.5);
 	padding: 15px;
@@ -57,6 +66,7 @@ button {
 	margin: 10px 20px 10px 0px;
 	display: inline-block;
 }
+/*estilo de boton para Añadir una nueva tarjeta*/
 .botonTarjeta {
 	background-color: rgba(44,169,199,0.9);
 	padding: 10px;
@@ -64,6 +74,7 @@ button {
 	border-radius: 10px;
 	margin-top: 10px;
 }
+/*estilo para etiquetas de textarea*/
 textarea {
 	display: block;
 	margin: 5px;
@@ -72,21 +83,27 @@ textarea {
 	min-height: 50px;
 	max-height: 50px;
 }
+/*clase para colocar los elementos en la parte superior respecto al anterior*/
 .arriba{
 	vertical-align: top;
 }
+/*clase para esconder etiquetas*/
 .hide {
   display: none;
 }
+/*boton para guardar la tarjeta que se crea*/
 .botonGuardar{
 	background-color: rgba(44,169,199,0.5);
 	padding: 5px;
 	border-radius: 10px;
 }
+/*formato para los label que continen los nombres de las tarjetas*/
 .etiquetas {
 	width: 100%;
 	text-align: left;
 	padding: 2px;
 	margin: 2px;
 }
-
+header {
+	background-color: #fad400;
+}
