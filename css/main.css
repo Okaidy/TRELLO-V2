@@ -107,3 +107,7 @@ textarea {
 header {
 	background-color: #fad400;
 }
+.cambio {
+	border-radius: 10px;  
+	padding-left: 5px;
+}

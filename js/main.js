@@ -66,7 +66,9 @@ function crearLista(titulo,elemento){
 				contenedor.appendChild(btnTarjeta);
 				contenedor.setAttribute("ondrop","drop(event)");
 				contenedor.setAttribute("ondragover","allowDrop(event)");
-				
+				contenedor.setAttribute("ondragleave","dragLeave(event)");
+				contenedor.setAttribute("ondragend","dragEnd(event)");
+			
 				titulo.value="";
 				boton.parentNode.removeChild(elemento);
 
@@ -135,10 +137,21 @@ function drop(ev) {
 
 function allowDrop(ev) {
     ev.preventDefault();
-    ev.target.style.border = "4px solid #fad400";
+    if ( event.target.className == "arriba contenedor text-center" ) {
+    	ev.target.style.border = "4px solid #fad400";
+    }
 }
 
 function dragChange(ev){
-	ev.target.style.background = "#2CA9C7";
+	ev.target.style.background ="rgba(44,169,199,0.3)";
 }
 
+function dragLeave(ev) {
+    if ( ev.target.className == "arriba contenedor text-center" ) {
+        ev.target.style.border = "";
+    }
+}
+
+function dragEnd(ev) {
+    ev.target.classList.add('cambio');
+}
