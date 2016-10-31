@@ -135,6 +135,7 @@ function drop(ev) {
 
 function allowDrop(ev) {
     ev.preventDefault();
+    ev.target.style.border = "4px solid #fad400";
 }
 
 function dragChange(ev){
